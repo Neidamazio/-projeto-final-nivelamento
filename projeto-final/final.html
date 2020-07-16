@@ -17,12 +17,15 @@ Crie um sistema que possa receber 5 números, ok
 8.3 Ele deve retornar também se tem algum numero repetido, se sim, qual é esse número
 e quantas vezes está repetido.*/
 
-var numeros = [10,15,11,5,10];
 var maior = 0;
 var menor = 1000;
-var numRepetido = numeros[0];
+//var numRepetido = numeros[0];
 var quantRepeticao = 1;
+var numeros = [];
 
+for (i = 0; i < 5; i++) {
+    numeros[i] = prompt("Digite um numero: ");  
+}
 
 for (i = 0; i < numeros.length; i++) {
     if (numeros[i] > maior) {
@@ -48,6 +51,8 @@ for (i = 0; i < numeros.length; i++) {
         document.write(numeros[i] + " - Impar: " + "<br>");
     }
 } 
+
+var numRepetido = numeros[0];
 
 for (i = 1; i < numeros.length; i++) {
     if (numRepetido == numeros[i]) {
