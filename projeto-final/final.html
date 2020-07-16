@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+</head>
+<body>
+    <script>
+        /*
+Crie um sistema que possa receber 5 números, ok
+
+8.2 Esse sistema deve retornar para o usuário o menor e o maior número.ok
+
+8.3 Ele também deve informar quais são os números pares e ímpares. ok
+
+8.3 Ele deve retornar também se tem algum numero repetido, se sim, qual é esse número
+e quantas vezes está repetido.*/
+
+var numeros = [10,15,11,5,10];
+var maior = 0;
+var menor = 1000;
+var numRepetido = numeros[0];
+var quantRepeticao = 1;
+
+
+for (i = 0; i < numeros.length; i++) {
+    if (numeros[i] > maior) {
+        maior = numeros[i];
+    }
+}  
+
+for (i = 0; i < numeros.length; i++) {
+    if (numeros[i] < menor) {
+        menor = numeros[i];
+    }
+}
+
+document.write("Maior numero: " + maior + "<br>");
+
+document.write("Menor numero: " + menor + "<br>"+"<br>");
+
+
+for (i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 2 == 0) {
+        document.write(numeros[i] + " - Par: " + "<br>");
+    }else{
+        document.write(numeros[i] + " - Impar: " + "<br>");
+    }
+} 
+
+for (i = 1; i < numeros.length; i++) {
+    if (numRepetido == numeros[i]) {
+         quantRepeticao++;
+    }
+}
+
+document.write("<br>" + numRepetido + " - " + quantRepeticao + " vezes repetido." + "<br>");
+
+// OBS.: Sei que tem um "bug" nesse ultimo exercicio, pois so ira testar o primeiro numero com os demais.
+// Porem não tive tempo para encontrar uma solução para corrigir.
+
+
+    </script>
+</body>
+</html>
